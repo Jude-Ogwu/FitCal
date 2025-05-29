@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Main circle background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#8fe067" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="0" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" filter="url(#shadow)" />
+  
+  <!-- "F" Shape for Fitness -->
+  <path d="M70 60 L110 60 L110 85 L80 85 L80 100 L105 100 L105 125 L80 125 L80 145 L70 145 Z" fill="white" />
+  
+  <!-- Custom Calorie Counter Shape -->
+  <path d="M120 60 Q145 60, 145 85 Q145 110, 120 110 Q120 110, 120 145 L130 145 L130 125 Q155 125, 155 95 Q155 60, 120 60 Z" fill="white" />
+  
+  <!-- Pulse Line -->
+  <polyline points="35,100 45,100 55,80 65,115 75,90 85,100 95,100" 
+            stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Small Circle Indicator -->
+  <circle cx="155" cy="75" r="8" fill="white" />
+</svg> 
